@@ -26,5 +26,9 @@ export const MoviesList = styled.div`
     border-radius: 4px;
     margin-top: 0.5rem;
     font-size: 0.9rem;
+
+    &:hover {
+      background-color: #000000;
+    }
   }
 `;
