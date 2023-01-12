@@ -9,6 +9,12 @@ export const MoviesList = styled.div`
   align-items: center;
   grid-gap: 1rem;
   grid-row-gap: 4rem;
+
+  @media (max-width: 992px) {
+    display: flex;
+    flex-direction: column;
+  }
+
   img {
     max-width: 300px;
   }
@@ -26,6 +32,12 @@ export const MoviesList = styled.div`
     border-radius: 4px;
     margin-top: 0.5rem;
     font-size: 0.9rem;
+
+    @media (max-width: 992px) {
+      margin-top: 1rem;
+      width: 100%;
+      text-align: center;
+    }
 
     &:hover {
       background-color: ${({ theme }) => theme.colors.textColor};

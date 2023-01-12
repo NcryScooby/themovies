@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { api } from "../../services/api";
 import { Backdrop, CircularProgress } from "@mui/material";
-import { Movie, Button } from "./style";
+import { Movie } from "./style";
 
 type Movie = {
   id: number;
@@ -51,15 +51,14 @@ export const MoviesDetails = () => {
             <h1>{movie.title}</h1>
             <p>{movie.overview}</p>
             {movie.vote_average ? <h2>Popularity: {movie.vote_average.toFixed(1)} / 10</h2> : null}
-            <Button>
-              <a
-                href={`https://youtube.com/results?search_query=trailer ${movie.title}`}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Watch Trailer
-              </a>
-            </Button>
+            <a
+              href={`https://youtube.com/results?search_query=trailer ${movie.title}`}
+              target="_blank"
+              rel="noreferrer"
+              className="anchor"
+            >
+              Watch Trailer
+            </a>
           </span>
         </div>
       </Movie>

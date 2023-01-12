@@ -1,5 +1,5 @@
 import { Error } from "../../animations/Error";
-import { Container, Box, Button } from "./style";
+import { Container, Box } from "./style";
 import { Link } from "react-router-dom";
 
 export const NotFound = () => {
@@ -12,9 +12,9 @@ export const NotFound = () => {
             This page is not available. The link you accessed may be broken or the page may have
             been removed.
           </p>
-          <Button>
-            <Link to="/">Go back to home</Link>
-          </Button>
+          <Link to="/" className="anchor">
+            Go back to home
+          </Link>
         </Box>
       </Container>
     </>

@@ -4,9 +4,19 @@ export const Container = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 4rem 0;
+
+  @media (max-width: 992px) {
+    display: flex;
+    flex-direction: column;
+  }
 
   img {
-    width: 200px;
+    width: 100px;
+
+    @media (max-width: 600px) {
+      width: 100px;
+    }
   }
 
   .links {
