@@ -4,10 +4,19 @@ import { ThemeProvider } from "styled-components";
 import { lightTheme } from "./themes/light";
 import { darkTheme } from "./themes/dark";
 import { GlobalStateContext } from "./contexts/GlobalStateContext";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const App = () => {
   const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    const localTheme = localStorage.getItem("theme");
+    localTheme && setTheme(localTheme);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
   return (
     <>

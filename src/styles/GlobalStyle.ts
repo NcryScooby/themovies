@@ -15,7 +15,7 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Poppins', sans-serif;
     color: ${({ theme }) => theme.colors.textColor};
     background-color: ${({ theme }) => theme.colors.backgroundColor};
-    width: 1220px;
+    max-width: 1200px;
     margin: 0 auto;
     }
 
@@ -26,5 +26,9 @@ export const GlobalStyles = createGlobalStyle`
 
   ul {
     list-style: none;
+    }
+
+  html, body, #app, #app>div {
+    height: 100%;
     }
 `;

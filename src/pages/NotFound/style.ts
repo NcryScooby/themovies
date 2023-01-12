@@ -21,24 +21,20 @@ export const Box = styled.div`
   p {
     margin: 0px 100px;
   }
-`;
 
-export const Button = styled.button`
-  margin-top: 1rem;
-  border: none;
-  padding: 10px 20px;
-  color: #ffffff;
-  background-color: #292929;
-  border-radius: 4px;
-  font-size: 1rem;
-  width: 60%;
-  cursor: pointer;
-  &:hover {
-    background-color: #000000;
-  }
-
-  a {
-    display: block;
-    width: 100%;
+  .anchor {
+    margin-top: 1rem;
+    border: none;
+    padding: 10px 20px;
+    color: #ffffff;
+    background-color: #292929;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 60%;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+      background-color: #000000;
+    }
   }
 `;

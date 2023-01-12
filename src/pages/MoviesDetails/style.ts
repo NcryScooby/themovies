@@ -11,6 +11,13 @@ export const Movie = styled.div`
     gap: 4rem;
     align-items: flex-start;
 
+    @media (max-width: 992px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
     img {
       width: 300px;
     }
@@ -19,33 +26,53 @@ export const Movie = styled.div`
       display: flex;
       flex-direction: column;
       gap: 1rem;
+
+      @media (max-width: 992px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
       h1 {
         font-size: 4rem;
+        @media (max-width: 992px) {
+          font-size: 1rem;
+        }
       }
       p {
         max-width: 80ch;
+
+        @media (max-width: 992px) {
+          margin: 0 2rem;
+        }
+      }
+
+      h2 {
+        @media (max-width: 992px) {
+          font-size: 1rem;
+        }
       }
     }
-  }
-`;
 
-export const Button = styled.button`
-  border: none;
-  padding: 10px 20px;
-  color: #ffffff;
-  background-color: #292929;
-  border-radius: 4px;
-  font-size: 1rem;
-  width: 40%;
-  cursor: pointer;
+    .anchor {
+      border: none;
+      padding: 10px 20px;
+      color: #ffffff;
+      background-color: #292929;
+      border-radius: 4px;
+      font-size: 1rem;
+      width: 40%;
+      cursor: pointer;
+      text-align: center;
 
-  &:hover {
-    background-color: ${({ theme }) => theme.colors.textColor};
-    color: ${({ theme }) => theme.colors.backgroundColor};
-  }
+      @media (max-width: 992px) {
+        width: 80%;
+      }
 
-  a {
-    display: block;
-    width: 100%;
+      &:hover {
+        background-color: ${({ theme }) => theme.colors.textColor};
+        color: ${({ theme }) => theme.colors.backgroundColor};
+      }
+    }
   }
 `;
