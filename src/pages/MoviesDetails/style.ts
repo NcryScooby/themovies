@@ -10,6 +10,7 @@ export const Movie = styled.div`
     justify-content: center;
     gap: 4rem;
     align-items: flex-start;
+    margin-bottom: 4rem;
 
     @media (max-width: 992px) {
       display: flex;

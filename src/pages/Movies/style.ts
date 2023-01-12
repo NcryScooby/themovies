@@ -9,6 +9,7 @@ export const MoviesList = styled.div`
   align-items: center;
   grid-gap: 1rem;
   grid-row-gap: 4rem;
+  margin-bottom: 4rem;
 
   @media (max-width: 992px) {
     display: flex;
