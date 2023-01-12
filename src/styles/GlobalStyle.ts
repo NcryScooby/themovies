@@ -13,8 +13,8 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    color: #0c0c0c;
-    background-color: #efefef;
+    color: ${({ theme }) => theme.colors.textColor};
+    background-color: ${({ theme }) => theme.colors.backgroundColor};
     width: 1220px;
     margin: 0 auto;
     }

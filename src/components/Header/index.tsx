@@ -1,13 +1,22 @@
-import logo from "../../assets/logo.svg";
+import logoDark from "../../assets/logoDark.svg";
+import logoLight from "../../assets/logoLight.svg";
 import { Container } from "./style";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { GlobalStateContext } from "../../contexts/GlobalStateContext";
 
 export const Header = () => {
+  const { theme, setTheme } = useContext(GlobalStateContext);
+
+  const handleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
+
   return (
     <>
       <Container>
         <div>
-          <img src={logo} alt="logo" />
+          <img src={theme === "light" ? logoLight : logoDark} alt="logo" />
         </div>
         <div className="links">
           <ul>
@@ -17,9 +26,7 @@ export const Header = () => {
             <li>
               <Link to="/movies">Movies</Link>
             </li>
-            <li>
-              <Link to="/">Theme</Link>
-            </li>
+            <button onClick={handleTheme}>Theme</button>
           </ul>
         </div>
       </Container>

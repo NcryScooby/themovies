@@ -1,7 +1,7 @@
 import Lottie from "lottie-react";
-import movie from "./movie.json";
+import movie from "./movieLight.json";
 
-export const Movie = () => (
+export const MovieLight = () => (
   <Lottie
     animationData={movie}
     loop={true}
