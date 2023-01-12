@@ -28,7 +28,8 @@ export const MoviesList = styled.div`
     font-size: 0.9rem;
 
     &:hover {
-      background-color: #000000;
+      background-color: ${({ theme }) => theme.colors.textColor};
+      color: ${({ theme }) => theme.colors.backgroundColor};
     }
   }
 `;
